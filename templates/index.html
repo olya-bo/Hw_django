@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Main page
+{% endblock %}
+
+{% block content %}
+    <p>I'm index page</p>
+    <p><a href="{% url 'article' article_id %}">Article {{ article_id }}</a></p>
+    <p><a href="{% url 'article_slug' article_id slug %}">Article {{ article_id }} {{ slug }}</a></p>
+{% endblock %}

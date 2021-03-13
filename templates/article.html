@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Article
+{% endblock %}
+
+{% block content %}
+<div>
+    {% if article_id|divisibleby:'2' %}
+        <span>{{ article_id }}: even</span>
+    {% else %}
+        <span>{{ article_id }}: not even</span>
+    {% endif %}
+{% if slug %}
+    {% include 'article_slug_include.html' %}
+{% endif %}
+</div>
+{% endblock %}
